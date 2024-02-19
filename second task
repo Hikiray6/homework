@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<double> temperatures = {36.9, 37.1, 37.3, 37.4, 37.0, 36.8, 37.2, 37.5, 36.9, 37.1};
+
+    int countAboveThreshold = 0;
+
+    for (double temp : temperatures) {
+        if (temp > 37.2) {
+            countAboveThreshold++;
+        }
+    }
+
+    double percentage = (static_cast<double>(countAboveThreshold) / temperatures.size()) * 100;
+
+    cout << "Percentage of people with temperature above 37.2°C: " << percentage << "%" << std::endl;
+
+    return 0;
+}
